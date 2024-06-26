@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - IT Company</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-container">
+        <div class="containerForm">
+        <h1>Contact</h1>
+        <form action="/submit-your-form-handler" method="POST">
+            <label for="title">Title:</label>
+            <select id="title" name="title" required>
+                <option value="mr">Mr.</option>
+                <option value="mrs">Mrs.</option>
+                <option value="other">Other/Prefer not to say</option>
+            </select>
+    
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first_name" required>
+    
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last_name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" class="messageArea" name="message"></textarea>
+    
+            <button type="submit">Send</button>
+            <button type="button" onclick="resetForm()">Delete</button>
+        </form>
+    </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 IT Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>

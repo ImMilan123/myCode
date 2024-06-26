@@ -1,0 +1,180 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    padding: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.titleBlock {
+    text-align: center;
+    height: 400px;
+    width: 100%;
+    background-image: url("imgs/bcg.jpg");
+}
+
+.title {
+    padding-top: 200px;
+}
+
+footer {
+    
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.containerForTwo {
+    display: flex;
+    justify-content:space-between;
+    margin-top: 50px;
+    max-width: 1000px;
+
+}
+
+.employeeDetails {
+    width: 50%;
+}
+
+.employeeImg img {
+    height: 400px;
+    margin-top: 80px;
+}
+
+.aboutContainer {
+    max-width: 900px;
+    text-align: center;
+}
+
+.productsBlock {
+    max-width: 900px;
+    text-align: center;
+}
+
+.description {
+    margin-top: 30px;
+}
+
+form {
+    margin-top: 20px;
+}
+.containerForm {
+    width: 50%; 
+    padding: 25px;
+    background-color: rgb(237, 237, 237);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    max-width: 600px;
+}
+
+
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.messageArea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: rgb(88, 88, 107);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+p {
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin-top: 40px; 
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, select, textarea {
+    margin-top: 5px;
+    padding: 8px;
+    width: 100%; 
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+main {
+    display: flex;          
+    flex-direction: column; 
+    align-items: center;    
+    text-align: center;     
+    width: 100%;           
+    margin-top: 0;     }
+
+.containerAllEmployees {
+    max-width: 1000px;
+    
+
+}
