@@ -1,0 +1,41 @@
+import random
+
+word_dict = ["Whistle", "Harmony", "Lantern", "Elephant", "Mystery", "Venture", "Capture", "Journey", "Rendezvous", "Twilight", "Cascade", "Vibrant", "Tangerine", "Bizarre", "Tornado", "Compass", "Serenity", "Fantasy", "Uplift", "Thunder"]
+
+revealed_letters = ["a", "e", "i", "o", "u", "A", "E", "I" ,"O", "U"]
+
+def main():
+    choice = input("1.Start the game\n2.Quit\n:")
+    if choice == "1":
+        game()
+    elif choice == "2":
+        print("quitting program...")
+    else:
+        print("please input 1 or 2")
+
+def game():
+    global revealed_letters  # Declare revealed_letters as a global variable
+    word = random.choice(word_dict)
+    word = word.upper()
+    word_unknown = ""
+    lifes = 10
+    guess = " "
+    for life in range(lifes):
+        for letter in word:
+            if letter in revealed_letters:
+                word_unknown = word_unknown + letter
+            else:
+                word_unknown = word_unknown + "_"
+        print(word_unknown)
+        word_unknown = ""
+        letter_guess = input("guess a letter:")
+        if len(letter_guess) > 1 or  len(letter_guess) == 0:
+            print("please guess only one letter")
+        elif len(letter_guess) == 1:
+            guess = guess + letter_guess
+            guess = guess.split()  # Splitting removes spaces
+            print("already guessed letters: " + " ".join(guess))  # Joining with spaces
+    print("YOU LOSE")
+    
+if __name__ == "__main__":
+    main()
