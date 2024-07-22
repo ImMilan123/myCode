@@ -1,0 +1,284 @@
+:root {
+    --header_hight: 168px;
+    --nav_width: 84px;
+    --nav_width_expanded: 320px;
+  }
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+header {
+    height: 168px;
+    background-color: #74AAD4;
+    width: 100%;
+}
+
+.headerRow {
+    height: 56px;
+    width: 100%;
+}
+
+#HeaderRow1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#layoutPicker {
+    height: 40px;
+    width: 340px;
+    background-color: #3b698D;
+    border-radius: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#month {
+    text-align: center;
+    width: 49%;
+    cursor: pointer;
+}
+.active_layout {
+    color: #FFF;
+    font-size: 32px;
+    transition: 0.3s;
+}
+
+#vertical_line_container {
+    width: 2%;
+}
+
+#verticalLIne {
+    width: 1px;
+    height: 25px;
+    background-color: #fff;
+}
+
+#week {
+    text-align: center;
+    width: 49%;
+    cursor: pointer;
+}
+
+.unactive_layout {
+    color: #BCBCBC;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+#HeaderRow2 {
+    color: #fff;
+    font-size: 35px;
+    display: flex;
+    flex-direction: row;
+}
+
+.third {
+    height: 100%;
+    width: 33.3%;
+    display: flex;
+    align-items: center;
+}
+
+#Third2 {
+    justify-content: space-evenly;
+}
+
+.monthSwitchButton{width: 25%;
+text-align: center;
+cursor: pointer;
+transition: transform 0.03s linear;}
+
+#lastMonth:active {
+    transform: translateX(-5px);
+  }
+#nextMonth:active {
+    transform: translateX(5px);
+  }
+
+.thisMonth{width: 50%;
+    font-size: 28px;
+text-align: center;}
+
+#Third3 {
+    justify-content: end;
+    padding-right: 20px;
+    
+}
+
+#HeaderRow3 {
+    background-color: #9Ec4e2;
+    display: flex;
+    flex-direction: row;
+}
+
+#empty {
+    width: var(--nav_width);
+    transition: 0.3s;
+}
+
+#empty.expanded {
+    width: var(--nav_width_expanded);
+}
+
+#daysRow {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.day {
+    width: 14.28%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: 0.3s;
+}
+
+.day p {
+    margin-bottom: 1px;
+    font-size: 20px;
+}
+
+#side_navigation {
+    width: 84px;
+    height: 100%;
+    background-color: #D7e2eb;
+    position: fixed;
+    top: 168px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+#side_navigation.active {
+    width: 320px;
+}
+
+#side_navigation.active .button {
+    display: block;
+}
+
+
+.button {
+    box-sizing: border-box;
+    width: inherit;
+    border-top: 2px solid #fff;
+    color: #FFF;
+    text-align: center;
+    font-size: 23px;
+    display: none;
+}
+
+.button p {
+    margin: 11px 0 0 0;
+}
+
+#button1 {
+    width: 100%;
+    margin-top: 5px;
+    margin-right: auto;
+    display: flex;
+    justify-content: end;
+    transition: 0.5s;
+
+}
+
+#button2 {
+    height: 80px;
+}
+
+#username {
+    color: #000;
+}
+
+#user_email {
+    color: #8e9498;
+    font-size: medium;
+}
+
+#button3 {
+    height: 50px;
+    background-color: #abb9c4;
+}
+
+#button4 {
+    height: 50px;
+    background-color:#3b698b ;
+    position: fixed; 
+    bottom: 0; 
+    width: inherit;
+}
+
+.menu_button {
+    display: inline-block;
+    cursor: pointer;
+    height: 70px;
+    width: 50px;
+    margin-right: 17px;
+
+}
+
+
+.bar {
+    width: 100%;
+    height: 7px;
+    background-color: #333;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.calendar_day {
+    border-color: #000;
+    border: 1px;
+}
+
+#calendar_container {
+    display: grid;
+    transition: 0.3s;
+}
+
+#calendar_container {
+    padding: 4px 4px 4px 4px;
+    height: calc(100vh - var(--header_hight) - 8px);
+    width:  calc(100% - var(--nav_width) - 8px);
+    margin-left:var(--nav_width) ;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 4px;
+        grid-row-gap: 4px;
+}
+
+#calendar_container.offset {
+    margin-left:var(--nav_width_expanded) ;
+    width:  calc(100% - var(--nav_width_expanded) - 8px);
+}
+
+.weekend {
+    background-color: #abb9c4;
+    text-align: center;
+    font-size: 5vh;
+    padding-top: 3vh;
+}
+
+.workday {
+    background-color: #D9d9d9;
+    text-align: center;
+    font-size: 5vh;
+    padding-top: 3vh;
+}
+
+.notThisMonth {
+    color: #bbbbbb;
+    background-color: #eeeeee;
+}
+
+#button1.rotated {
+    transform: rotateZ(360deg);
+}
