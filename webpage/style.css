@@ -2,6 +2,8 @@
     --header_hight: 168px;
     --nav_width: 84px;
     --nav_width_expanded: 320px;
+    --dark_blue: #4744b6;
+    --primary_blue:#9Ec4e2;
   }
 
 body {
@@ -112,7 +114,7 @@ text-align: center;}
 }
 
 #HeaderRow3 {
-    background-color: #9Ec4e2;
+    background-color: var(--primary_blue);
     display: flex;
     flex-direction: row;
 }
@@ -179,18 +181,10 @@ text-align: center;}
     margin: 11px 0 0 0;
 }
 
-#button1 {
-    width: 100%;
-    margin-top: 5px;
-    margin-right: auto;
-    display: flex;
-    justify-content: end;
-    transition: 0.5s;
-
-}
 
 #button2 {
     height: 80px;
+
 }
 
 #username {
@@ -279,6 +273,116 @@ text-align: center;}
     background-color: #eeeeee;
 }
 
-#button1.rotated {
-    transform: rotateZ(360deg);
+#button1 {
+    width: 100%;
+    margin-top: 5px;
+    margin-right: auto;
+    display: flex;
+    justify-content: end;
+    
+
+}
+
+
+.menu_button.rotated { 
+    transform: rotateZ(90deg);
+    transition: 0.5s;
+}
+
+#log-in_main, #sign-up_main {
+    height: calc(100vh - 100px);
+    background-color: var(--primary_blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.website_title {
+    padding-top: 10vh;
+
+    font-size: 15vh;
+    width: 80vh;
+    text-align: center;
+}
+
+.login {
+    width: 60vh;
+    align-items: left;
+}
+
+.title_login {
+    margin-left: 90px;
+    font-weight:bolder;
+    font-size: 7vh;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 3vh;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+.form {
+    width: 350px;
+}
+
+.space {
+    background-color: white;
+    width: calc(100% - 15px);
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    font-size: larger;
+    padding-left: 15px;
+}
+
+.start_button {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: var(--dark_blue);
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 3vh;
+    line-height: 60px;
+    text-decoration-line: none;
+}
+
+.or {
+    font-weight: 10s;
+    color: #6d6767;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+footer {
+    background-color: white;
+    height: 100px;
+    text-align: center;
+}
+
+#footer_website_name {
+    padding-top: 20px;
+    font-size: 25px;
+    
+}
+
+.sign-up {
+    width: 60vh;
+    align-items: left;
+}
+
+.title_sign-up {
+    padding-top: 10vh;
+    font-weight:bolder;
+    font-size: 7vh;
+}
+
+.today {
+    background-color: #4744b6;
+    color: white;
 }

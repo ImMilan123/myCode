@@ -1,0 +1,25 @@
+
+export const menu_button = document.getElementById("button1");
+export const side_navigation = document.getElementById("side_navigation");
+export const empty = document.getElementById("empty");
+export const calendar_main = document.getElementById("calendar_container");
+export const month_layout = document.getElementById("month");
+export const week_layout = document.getElementById("week");
+export const clock = document.getElementById("currentTime");
+export const days = [...document.querySelectorAll(".workday, .weekend")];
+export const lastMonthButton = document.getElementById("lastMonth");
+export const nextMonthButton = document.getElementById("nextMonth");
+export const dateDisplay = document.getElementById("activeMonth");
+export const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+export const date = new Date();
+export let month = date.getMonth();
+export let ThisMonth = date.getMonth();
+export let ThisYear = date.getFullYear();
+export let dayOfWeek = date.getDay();
+dayOfWeek = dayOfWeek == 0 ? 7 : dayOfWeek;
+export let year = date.getFullYear();
+export let today = date.getDate();
+export let daysInMonth = new Date(year, month + 1, 0).getDate();
+export let firstDay = new Date(year, month, 1).getDay();
+firstDay = firstDay === 0 ? 7 : firstDay;
+export let daysInNextMonth = 0;
